@@ -1,0 +1,6 @@
+Al terminar cada ejercicio, se debe hacer la carga del formulario con el numero de ejercicio terminado. el commit y el push
+1- en uno.js
+	alert("tenes dos mascotas xxxx y xxxx, que pesan xx y xx kilos, la suma de los kilos es xx")
+
+2- en dos.js
+	alert("tu compra es de $xxxx, mas el iva es $xxxx").
