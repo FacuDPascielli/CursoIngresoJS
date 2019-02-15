@@ -2,10 +2,12 @@
 function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
-	var random
+	var numero
 
-	random=Math.round(Math.random()*10)
+	numero=Math.round(Math.random()*10)
 
-	alert(random)
+	alert(numero)
+
+	//console.log(numero)
 
 }//FIN DE LA FUNCIÓN
