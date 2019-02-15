@@ -1,11 +1,18 @@
 function mostrar()
 {
-	var nombre;
-	var localidad;
+	var precioinicial;
+  	var preciofinal;
+  	var iva;
 
-	nombre=document.getElementById('elNombre').value;
-	localidad=document.getElementById('laLocalidad').value;
+  	precioinicial=document.getElementById('elNombre').value;
+  	preciofinal=document.getElementById('laLocalidad').value;
+  	precioinicial=parseInt(precioinicial);
 
-	alert("Usted es "+nombre+" y vive en la localidad "+localidad+".")
+  	iva=precioinicial*21/100;
+
+ 	 preciofinal=precioinicial+iva;
+
+  	document.getElementById('laLocalidad').value=preciofinal;
+
   
 }
