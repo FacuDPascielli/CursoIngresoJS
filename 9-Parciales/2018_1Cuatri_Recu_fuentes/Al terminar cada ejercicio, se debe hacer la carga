@@ -4,3 +4,12 @@ Al terminar cada ejercicio, se debe hacer la carga del formulario con el numero 
 
 2- en dos.js
 	alert("tu compra es de $xxxx, mas el iva es $xxxx").
+
+3-en tres.js
+
+en un restaurante, un grupo de amigos quiere saber cuanto debe pagar uno del total, recordar que se debe agregar 10% de propina, y que los precios no incluyen el iva, mostrar todo en un alert
+
+4 en cuatro.js
+
+esn una tienda de libros existe una oferta por la cual si compra mas de dos libros tiene un 10% de dsecuentpço en el precio y si ademas supera los 2000 se le hace un 15% de descuenbto adicional, reordar que si la compra con tarjeta se le debera agregar un 10% de recargo.
+mostrar todo en un alert la informacion.

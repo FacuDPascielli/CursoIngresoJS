@@ -1,18 +1,20 @@
 function mostrar()
 {
-	var precioinicial;
-  	var preciofinal;
+	 var precioinicial;
+  	var porcentaje;
   	var iva;
+  	var preciofinal
 
-  	precioinicial=document.getElementById('elNombre').value;
-  	preciofinal=document.getElementById('laLocalidad').value;
+  	precioinicial=prompt("Ingrese un precio");
   	precioinicial=parseInt(precioinicial);
+  	porcentaje=parseInt(porcentaje)
 
-  	iva=precioinicial*21/100;
+  	iva=precioinicial*preciofinal/100;
 
- 	 preciofinal=precioinicial+iva;
+  	alert("tu compra es de"+precioinicial+", mas el iva es "+iva).
 
-  	document.getElementById('laLocalidad').value=preciofinal;
+ 	 
+  	
 
   
 }
