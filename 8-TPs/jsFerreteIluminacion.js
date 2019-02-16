@@ -15,21 +15,22 @@ function CalcularPrecio ()
  	var marcas;
  	var descuento;
  	var preciodesc;
+ 	var mensaje;
+ 	var iibb;
+ 	var descuentorecargo
 
  	marcas=document.getElementById('Marca').value;
  	cantidadlam=document.getElementById('Cantidad').value;
  	preciodesc=document.getElementById('precioDescuento').value;
  	cantidadlam=parseInt(cantidadlam);
  	precio=cantidadlam*35;
-
  	
 
- 	if(cantidadlam>6)
+ 	if(cantidadlam>5)
  	{
  		precio=parseInt(precio);
- 		cantidad=parseInt(cantidad);
  		descuento=precio-precio*50/100;
- 		
+ 		mensaje=descuento
 
  	}else
  		{
@@ -38,20 +39,101 @@ function CalcularPrecio ()
  			if(marcas=="ArgentinaLuz")
  	{
  		precio=parseInt(precio);
- 		cantidad=parseInt(cantidad);
  		descuento=precio-precio*40/100;
- 	}	else
+ 		mensaje=descuento;
+ 	}
+ 	else
  		{
  		precio=parseInt(precio);
- 		cantidad=parseInt(cantidad);
- 		descuento=precio-precio*30/100
+ 		descuento=precio-precio*30/100;
+ 		mensaje=descuento;
  		}		
+
+ 	}else
+ 		{	if(cantidadlam==4)
+ 	{
+ 			if(marcas=="ArgentinaLuz" || marcas=="FelipeLamparas")
+ 	{
+
+ 		precio=parseInt(precio);
+ 		descuento=precio-precio*25/100;
+ 		mensaje=descuento;
+ 	}else
+ 		{
+
+ 		precio=parseInt(precio);
+ 		descuento=precio-precio*20/100;
+ 		mensaje=descuento;
+
+
+ 		}
+
+ 	}else
+ 		{
+ 			if(cantidadlam==3)
+ 	{
+ 		if(marcas="ArgentinaLuz")
+ 	{
+ 		precio=parseInt(precio);
+ 		descuento=precio-precio*15/100;
+ 		mensaje=descuento;
+
+
+ 	}else
+ 		{
+
+ 		if(marcas="FelipeLamparas")
+ 	{
+ 		precio=parseInt(precio);
+ 		descuento=precio-precio*10/100;
+ 		mensaje=descuento;
+
+ 	}else
+ 		{
+
+ 		precio=parseInt(precio);
+ 		descuento=precio-precio*5/100;
+ 		mensaje=descuento;
+ 		}
+
+ 		}
+
+ 		
+
+ 	}
+
+
+
+ 		}
+
 
  		}
  			
 
+ 		}else
+ 		{
+if(mensaje>120)
+ 	{	
+ 		mensaje=parseInt(mensaje);
+ 		iibb=mensaje*10/100;
+ 		;
+		alert("Usted pago $"+iibb+" de IIBB. ");
+		descuentorecargo=mensaje+iibb
+		document.getElementById('precioDescuento').value=descuentorecargo
+
+ 	}else
+ 		{
+ 			mensaje=preciodesc
+
+ 			document.getElementById('precioDescuento').value=preciodesc
+
+ 		}
+ 		
  		}
 
+
+
+ 		
 
 
 
