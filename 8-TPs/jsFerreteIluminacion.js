@@ -41,8 +41,7 @@ function CalcularPrecio ()
  		precio=parseInt(precio);
  		descuento=precio-precio*40/100;
  		mensaje=descuento;
- 	}
- 	else
+ 	}else
  		{
  		precio=parseInt(precio);
  		descuento=precio-precio*30/100;
@@ -110,8 +109,8 @@ function CalcularPrecio ()
  		}
  			
 
- 		}else
- 		{
+ 		}
+ 
 if(mensaje>120)
  	{	
  		mensaje=parseInt(mensaje);
@@ -121,22 +120,21 @@ if(mensaje>120)
 		descuentorecargo=mensaje+iibb
 		document.getElementById('precioDescuento').value=descuentorecargo
 
- 	}else
- 		{
- 			mensaje=preciodesc
+ 	}
+ 	
+ 	
 
- 			document.getElementById('precioDescuento').value=preciodesc
-
- 		}
+ 	
  		
- 		}
+ 		
 
 
 
  		
 
+ 		
 
-
+ 			document.getElementById('precioDescuento').value=mensaje
 
 
 
