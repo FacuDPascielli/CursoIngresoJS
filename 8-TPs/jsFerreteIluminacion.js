@@ -14,147 +14,152 @@ function CalcularPrecio ()
  	var precio;
  	var marcas;
  	var descuento;
- 	var preciodesc;
  	var mensaje;
  	var iibb;
- 	var descuentorecargo
+ 	var recargo;
+ 	var preciofinal
 
  	marcas=document.getElementById('Marca').value;
  	cantidadlam=document.getElementById('Cantidad').value;
  	preciodesc=document.getElementById('precioDescuento').value;
- 	cantidadlam=parseInt(cantidadlam);
- 	precio=cantidadlam*35;
+ 	precio=35;
+ 	precio=parseInt(precio)
  	
-
- 	if(cantidadlam>5)
+ 	switch(cantidad)
  	{
- 		precio=parseInt(precio);
- 		descuento=precio-precio*50/100;
- 		mensaje=descuento
+ 		case "5":
+ 			switch(marcas)
+ 			{
+				case "ArgentinaLuz":
 
- 	}else
- 		{
- 			if(cantidadlam==5)
- 	{
+				 					descuento=precio*cantidadlam*0.4;
+				 					descuento=parseInt(descuento);
+				 					preciofinal=precio-descuento;
+				 					document.getElementById('precioDescuento').value=preciofinal;
+				 	break;
+
+				 				default:
+				 						descuento=precio*cantidadlam*0.3;
+				 						descuento=parseInt(descuento);
+				 						preciofinal=precio-descuento;
+				 						document.getElementById('precioDescuento').value=preciofinal;
+				 	break;
+ 			
+ 			}
+ 				
+
+ 					break;
+
+ 		case "4":
+ 			switch(marcas)
+ 			{
+ 				case "ArgentinaLuz":
+				 					descuento=precio*cantidadlam*0.25;
+				 					descuento=parseInt(descuento);
+				 					preciofinal=precio-descuento;
+				 					document.getElementById('precioDescuento').value=preciofinal;
+
+				 					break;
+
+				case "FelipeLamparas":
+									descuento=precio*cantidadlam*0.25;
+ 									descuento=parseInt(descuento);
+ 									preciofinal=precio-descuento;
+ 									document.getElementById('precioDescuento').value=preciofinal;
+
+ 									break;
+ 				default:
+ 									descuento=precio*cantidadlam*0.2;
+ 									descuento=parseInt(descuento);
+ 									preciofinal=precio-descuento;
+ 									document.getElementById('precioDescuento').value=preciofinal;
+
+
+ 			}
+
+ 			
+ 					break;
+
+ 		case "3":
+ 			switch(marcas)
+ 			{
+				case "ArgentinaLuz":
+				 					descuento=precio*cantidadlam*0.15;
+				 					descuento=parseInt(descuento);
+				 					preciofinal=precio-descuento;
+				 					document.getElementById('precioDescuento').value=preciofinal;
+
+				 					break;
+				case "FelipeLamparas":
+ 			}
+ 			/*
  			if(marcas=="ArgentinaLuz")
- 	{
- 		precio=parseInt(precio);
- 		descuento=precio-precio*40/100;
- 		mensaje=descuento;
- 	}else
- 		{
- 		precio=parseInt(precio);
- 		descuento=precio-precio*30/100;
- 		mensaje=descuento;
- 		}		
-
- 	}else
- 		{	if(cantidadlam==4)
- 	{
- 			if(marcas=="ArgentinaLuz" || marcas=="FelipeLamparas")
- 	{
-
- 		precio=parseInt(precio);
- 		descuento=precio-precio*25/100;
- 		mensaje=descuento;
- 	}else
- 		{
-
- 		precio=parseInt(precio);
- 		descuento=precio-precio*20/100;
- 		mensaje=descuento;
+ 				{
+ 					descuento=precio*cantidadlam*0.15;
+ 					descuento=parseInt(descuento);
+ 					preciofinal=precio-descuento;
+ 					document.getElementById('precioDescuento').value=preciofinal;
 
 
- 		}
-
- 	}else
- 		{
- 			if(cantidadlam==3)
- 	{
- 		if(marcas="ArgentinaLuz")
- 	{
- 		precio=parseInt(precio);
- 		descuento=precio-precio*15/100;
- 		mensaje=descuento;
+ 				}else
+ 					{
+ 						if(marcas=="FelipeLamparas")
+ 						{
+ 							descuento=precio*cantidadlam*0.10;
+ 							descuento=parseInt(descuento);
+ 							preciofinal=precio-descuento;
+ 							document.getElementById('precioDescuento').value=preciofinal;
 
 
- 	}else
- 		{
+ 						}else
+ 							{
+ 								descuento=precio*cantidadlam*0.05;
+ 								descuento=parseInt(descuento);
+ 								preciofinal=precio-descuento;
+ 								document.getElementById('precioDescuento').value=preciofinal;
 
- 		if(marcas="FelipeLamparas")
- 	{
- 		precio=parseInt(precio);
- 		descuento=precio-precio*10/100;
- 		mensaje=descuento;
-
- 	}else
- 		{
-
- 		precio=parseInt(precio);
- 		descuento=precio-precio*5/100;
- 		mensaje=descuento;
- 		}
-
- 		}
-
- 		
-
- 	}
+ 							}
 
 
+ 					}
+*/
+ 					break;
 
- 		}
-
-
- 		}
  			
 
- 		}
- 
-if(mensaje>120)
- 	{	
- 		mensaje=parseInt(mensaje);
- 		iibb=mensaje*10/100;
- 		;
-		alert("Usted pago $"+iibb+" de IIBB. ");
-		descuentorecargo=mensaje+iibb
-		document.getElementById('precioDescuento').value=descuentorecargo
+
+
+
+
+ 		default:
+ 		if(cantidadlam>=6)
+ 		{
+
+ 			descuento=precio*cantidadlam*0.5;
+ 			descuento=parseInt(descuento);
+ 			preciofinal=precio-descuento;
+ 			document.getElementById('precioDescuento').value=preciofinal;
+ 		
+
+ 		}else
+ 			{
+ 				if(cantidadlam<=2)
+ 				{
+ 					preciofinal=precio*cantidadlam;
+ 					document.getElementById('precioDescuento').value=preciofinal;
+ 				}
+
+ 			}
+
+
+
+
+
+
+
 
  	}
- 	
- 	
 
  	
- 		
- 		
-
-
-
- 		
-
- 		
-
- 			document.getElementById('precioDescuento').value=mensaje
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
