@@ -22,28 +22,27 @@ function CalcularPrecio ()
  	marcas=document.getElementById('Marca').value;
  	cantidadlam=document.getElementById('Cantidad').value;
  	preciodesc=document.getElementById('precioDescuento').value;
- 	precio=35;
+ 	precio=35*cantidadlam;
  	precio=parseInt(precio)
  	
- 	switch(cantidad)
+ 	switch(cantidadlam)
  	{
  		case "5":
  			switch(marcas)
  			{
 				case "ArgentinaLuz":
 
-				 					descuento=precio*cantidadlam*0.4;
+				 					descuento=precio*40/100;
 				 					descuento=parseInt(descuento);
 				 					preciofinal=precio-descuento;
-				 					document.getElementById('precioDescuento').value=preciofinal;
+				 					
 				 	break;
 
 				 				default:
-				 						descuento=precio*cantidadlam*0.3;
+				 						descuento=precio*30/100;
 				 						descuento=parseInt(descuento);
 				 						preciofinal=precio-descuento;
-				 						document.getElementById('precioDescuento').value=preciofinal;
-				 	break;
+				 						
  			
  			}
  				
@@ -54,26 +53,24 @@ function CalcularPrecio ()
  			switch(marcas)
  			{
  				case "ArgentinaLuz":
-				 					descuento=precio*cantidadlam*0.25;
+				 					descuento=precio*25/100;
 				 					descuento=parseInt(descuento);
 				 					preciofinal=precio-descuento;
-				 					document.getElementById('precioDescuento').value=preciofinal;
+				 					
 
 				 					break;
 
 				case "FelipeLamparas":
-									descuento=precio*cantidadlam*0.25;
+									descuento=precio*25/100;
  									descuento=parseInt(descuento);
  									preciofinal=precio-descuento;
- 									document.getElementById('precioDescuento').value=preciofinal;
-
+ 									
  									break;
  				default:
- 									descuento=precio*cantidadlam*0.2;
+ 									descuento=precio*20/100;
  									descuento=parseInt(descuento);
  									preciofinal=precio-descuento;
- 									document.getElementById('precioDescuento').value=preciofinal;
-
+ 									
 
  			}
 
@@ -84,46 +81,33 @@ function CalcularPrecio ()
  			switch(marcas)
  			{
 				case "ArgentinaLuz":
-				 					descuento=precio*cantidadlam*0.15;
+				 					descuento=precio*15/100;
 				 					descuento=parseInt(descuento);
 				 					preciofinal=precio-descuento;
-				 					document.getElementById('precioDescuento').value=preciofinal;
-
+				 					
 				 					break;
 				case "FelipeLamparas":
+ 		
+									descuento=precio*10/100;
+				 					descuento=parseInt(descuento);
+				 					preciofinal=precio-descuento;
+				 					
+				 					break;
+
+
+				default:
+									descuento=precio*5/100;
+ 									descuento=parseInt(descuento);
+ 									preciofinal=precio-descuento;
+ 						
+ 								
+ 									break;
+ 			
+
  			}
- 			/*
- 			if(marcas=="ArgentinaLuz")
- 				{
- 					descuento=precio*cantidadlam*0.15;
- 					descuento=parseInt(descuento);
- 					preciofinal=precio-descuento;
- 					document.getElementById('precioDescuento').value=preciofinal;
+ 		
 
-
- 				}else
- 					{
- 						if(marcas=="FelipeLamparas")
- 						{
- 							descuento=precio*cantidadlam*0.10;
- 							descuento=parseInt(descuento);
- 							preciofinal=precio-descuento;
- 							document.getElementById('precioDescuento').value=preciofinal;
-
-
- 						}else
- 							{
- 								descuento=precio*cantidadlam*0.05;
- 								descuento=parseInt(descuento);
- 								preciofinal=precio-descuento;
- 								document.getElementById('precioDescuento').value=preciofinal;
-
- 							}
-
-
- 					}
-*/
- 					break;
+ 									break;
 
  			
 
@@ -135,18 +119,18 @@ function CalcularPrecio ()
  		if(cantidadlam>=6)
  		{
 
- 			descuento=precio*cantidadlam*0.5;
+ 			descuento=precio*50/100;
  			descuento=parseInt(descuento);
  			preciofinal=precio-descuento;
- 			document.getElementById('precioDescuento').value=preciofinal;
+ 			
  		
 
  		}else
  			{
  				if(cantidadlam<=2)
  				{
- 					preciofinal=precio*cantidadlam;
- 					document.getElementById('precioDescuento').value=preciofinal;
+ 					preciofinal=precio;
+ 					
  				}
 
  			}
@@ -160,6 +144,20 @@ function CalcularPrecio ()
 
  	}
 
- 	
+
+ 	if(preciofinal>=120)
+ 	{
+ 		iibb=preciofinal*0.10;
+ 		alert("Usted pagó $"+preciofinal+", pero a eso se le agregó un recargo del 10% de $"+iibb+" .")
+ 		preciofinal=preciofinal+iibb
+
+ 		document.getElementById('precioDescuento').value=preciofinal;
+ 		
+
+ 	}else
+ 		{
+
+ 			document.getElementById('precioDescuento').value=preciofinal;
+ 		}
 
 }
