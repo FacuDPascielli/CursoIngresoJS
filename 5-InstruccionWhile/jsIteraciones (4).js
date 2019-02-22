@@ -1,13 +1,13 @@
 function mostrar()
 {
 
-	var number = prompt("ingrese un número entre 0 y 10.");
+	var numero = prompt("ingrese un número entre 0 y 10.");
 
-	while(number>10 || number<0)
+	while(numero>10 || numero<1)
 		{
-			number = prompt("ingrese un número entre 0 y 10.")
+			numero = prompt("Error, ingrese un número entre 0 y 10.");
 		}
-
-	document.getElementById('Numero').value=number;
+		
+		alert(numero);
 
 }//FIN DE LA FUNCIÓN
