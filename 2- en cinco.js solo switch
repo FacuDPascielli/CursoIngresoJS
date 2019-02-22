@@ -1,0 +1,4 @@
+2- en cinco.js solo switch
+cada habitacion de un hotel tiene un precio, hay promociones segun el tipo de pago, si es con tarjeta visa es de un 10%, si es por paypal hay un 15%, por mercadopago u 10%, efectivo 20%, y cualquier otro medio, solo un 5%.
+Si compraste un paquete "todo incluido" y pagas con paypal se te suma un 10% al descuento.
+si pagas en efectivo, tenes varias opciones, el paquete "solo desayunos te sluma un 10% al descuentp, si el paquete es "todo incluido" te suma un 15% y para el resto de los paquete no tiene descuento adicional
