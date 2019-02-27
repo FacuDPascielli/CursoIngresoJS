@@ -28,12 +28,12 @@ function mostrar()
  			numeromayor=primernum;
  		}else
  			{
- 				if(segundonum>=primernum && segundonum>=tercernum && segundonum>=cuartonum)
+ 				if(segundonum>=tercernum && segundonum>=cuartonum)
  					{
  						numeromayor=segundonum;
  					}else
  						{
- 							if(tercernum>=primernum && tercernum>=segundonum && tercernum>=cuartonum)
+ 							if(tercernum>=cuartonum)
  								{
  									numeromayor=tercernum;
  								}else
