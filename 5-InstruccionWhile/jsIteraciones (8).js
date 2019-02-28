@@ -3,10 +3,10 @@ function mostrar()
 
 	var contador=0;
 	var positivo=0;
-	var negativo=1;
+	var negativo=0;
 	var numero;
 	var suma;
-	var respuesta='si';
+	var respuesta=true;
 	var acumulador;
 	
 	while(respuesta==true)
@@ -16,15 +16,18 @@ function mostrar()
 		{	
 			numero=prompt("Ingrese un número");
 			numero=parseInt(numero);
-			respuesta=confirm("Dese ingresar otro número?");
 		}while(isNaN(numero));
-			if(num>=0)
+			
+			if(numero>=0)
 			{
-				suma+=numero
-			}else
-				{
-					negativo*=numero
-				}
+				positivo+=numero;
+			}
+			else
+			{
+				negativo*=numero;
+			}
+		
+		respuesta=confirm("Desea ingresar otro número?");
 	}
 		
 

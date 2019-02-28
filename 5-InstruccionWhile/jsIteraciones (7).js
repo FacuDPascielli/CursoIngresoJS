@@ -13,7 +13,7 @@ function mostrar()
 		{
 			num=prompt("Ingrese un número")
 			num=parseInt(num);
-			respuesta=prompt("Dese ingresar otro número?");
+			respuesta=prompt("Desea ingresar otro número?");
 		}while(isNaN(num))
 		{
 			acumulador+=num;

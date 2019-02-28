@@ -15,7 +15,6 @@ function mostrar()
 		{	
 			numero=prompt("Ingrese un número");
 			numero=parseInt(numero);
-			respuesta=confirm("Dese ingresar otro número?");
 		}while(isNaN(numero));
 		if(bandera==true)
 		{
@@ -34,7 +33,7 @@ function mostrar()
 					}
 
 			}
-	
+	respuesta=confirm("Desea ingresar otro número?");
 	}
 
 	document.getElementById('maximo').value=maximo
