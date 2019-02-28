@@ -4,30 +4,33 @@ function mostrar()
 	var sexo;
 	var contador=0;
 	var alumno;
-	var acumulador;
+	var acumulador=0;
 	var promedio;
 	var bandera=true;
 	var notabaja
+	var sexonotabaja;
+	var acumuladormasculino=0;
 	
 	while(contador<5)
 	{
 		contador++;
-		
-		nota=prompt("Ingrese su nota (Del 0 al 10).");
-		sexo=prompt("Ingrese su sexo (f ó m).");
-		acumulador+=nota
-		
-		do
-		{
-			nota=prompt("Error, ingrese su nota.");
-			nota=parseInt(nota);
-		}while(isNaN(num) || (nota<0 || nota>10));
-		
-		do
-		{
-			sexo=prompt("Error, ingrese su sexo.");
-		}while(sexo!="f" && sexo!="m");
 
+		do
+		{
+		nota=prompt("Ingrese su nota.");
+		nota=parseInt(nota);
+		}while(isNaN(nota) || (nota<0 || nota>10))
+		{
+			acumulador+=nota;
+		}
+		
+		do
+		{
+		sexo=prompt("Ingrese su sexo.");
+		}while(sexo!='f' && sexo!='m');
+		
+		
+		
 		if(bandera)
 		{
 			bandera=false;
@@ -40,20 +43,25 @@ function mostrar()
 						notabaja=nota;
 					}
 			}
+		if(notabaja==nota && sexo=="f")
+		{
+			sexonotabaja=sexo;
+		}
+		if(notabaja==nota && sexo=="m")
+			{
+				sexonotabaja=sexo;
+			}
 		
-
-		
-
-		
-		
-
+		if(sexo='m' && nota>=6)
+		{
+			acumuladormasculino+=1
+		}
+			
 
 	}
+	
+	promedio=acumulador/contador; 
+	alert("La nota más baja es "+notabaja+", y es de sexo "+sexonotabaja+". El promedio general es de "+promedio+". Y por último la cantidad de varones que su nota ha sido mayor o igual a 6 es de "+acumuladormasculino+".");
+		
 
-promedio=acumulador/contador;
-
-
-
-
-
-}
+}		
