@@ -23,10 +23,12 @@ function mostrar()
 		{
 			kilometros=prompt("Ingrese la velocidad en kilómetros");
 			kilometros=parseInt(kilometros);
-		}while(isNaN(kilometros) || (kilometros<0 || kilometros>250))
-			{
+		}while(isNaN(kilometros) || (kilometros<0 || kilometros>250));
+
+
+			
 				acumuladorvel+=kilometros
-			}
+			
 
 		do
 			{
@@ -39,15 +41,18 @@ function mostrar()
 				bandera=false;
 				velocidadbaja=kilometros;
 				velocidadalta=kilometros;
+				combustiblevelocidadbaja=combustible;
 			}else
 				{
 					if(velocidadbaja>kilometros)
 					{
 						velocidadbaja=kilometros;
+						combustiblevelocidadbaja=combustible;
 					}
 					if(velocidadalta<kilometros)
 					{
 						velocidadalta=kilometros;
+						velocidadaltasolido=kilometros;
 					}
 				}
 		
@@ -63,7 +68,7 @@ function mostrar()
 		
 		if(velocidadalta==kilometros && combustible=='s')
 			{
-				velocidadaltasolido=kilometros;
+				
 			}
 		
 		if(kilometros>100 && combustible=='l')
