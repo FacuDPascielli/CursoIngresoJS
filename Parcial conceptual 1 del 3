@@ -1,19 +1,4 @@
-trabajo practico "Interpreta, aplica y resuelve"
-con nota conceptual
-1 en una carpeta vacia del disco clonar su repositorio
-2 en la consola ingresar la carpeta clonada y verificar su "status"
-3 ABrir el sublime o visual studio code y cargar la carpeta clonada completa
-4 en el sublime abrir la carpeta CursoIngresoJS/9-Parciales/2018_1Cuatri_Recu_fuentes/
-5 Abrir los siguientes archivos
 
-a siete.js
-b ocho.js
-c nueve.js
-los enunciados seran resueltos en estos archivos
-
-6 ingresar al disco material en la carpeta "/### curso de ingreso"
-7 cargar el formulario con el ejercicio "0"
-(Esto sirve para tomar asistencia a los presentes, todos los alumnos deben estar registrados con el "0")
 
 1-en siete.js,
 Realizar el algoritmo que permita el ingreso por prompt de las velocidades en

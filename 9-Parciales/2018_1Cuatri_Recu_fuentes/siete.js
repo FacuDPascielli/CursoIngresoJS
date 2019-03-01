@@ -11,7 +11,7 @@ function mostrar()
 	var bandera=true;
 	var velocidadalta;
 	var velocidadaltasolido;
-	var bandera1=true;
+	
 
 
 
@@ -38,13 +38,19 @@ function mostrar()
 			{
 				bandera=false;
 				velocidadbaja=kilometros;
+				velocidadalta=kilometros;
 			}else
 				{
 					if(velocidadbaja>kilometros)
 					{
 						velocidadbaja=kilometros;
 					}
+					if(velocidadalta<kilometros)
+					{
+						velocidadalta=kilometros;
+					}
 				}
+		
 		if(velocidadbaja==kilometros && combustible=='s')
 			{
 				combustiblevelocidadbaja=combustible;
@@ -54,17 +60,7 @@ function mostrar()
 				combustiblevelocidadbaja=combustible;
 			}
 
-		if(bandera1)
-			{
-				bandera1=false;
-				velocidadalta=kilometros;
-			}else
-				{
-					if(velocidadalta<kilometros)
-					{
-						velocidadalta=kilometros;
-					}
-				}
+		
 		if(velocidadalta==kilometros && combustible=='s')
 			{
 				velocidadaltasolido=kilometros;
