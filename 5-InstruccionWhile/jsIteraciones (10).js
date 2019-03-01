@@ -7,9 +7,9 @@ function mostrar()
 	var suma;
 	var respuesta=true;
 	var numero;
-	var contadornegativo;
-	var contadordeceros;
-	var contadordepares
+	var contadornegativo=0;
+	var contadordeceros=0;
+	var contadordepares=0;
 	while(respuesta=true)
 	{
 		contador++;
